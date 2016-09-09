@@ -1,0 +1,53 @@
+{
+  "name": "base-task-alias",
+  "version": "0.0.0",
+  "description": "Plugin that adds `.taskAlias` method to your @node-base application. Creating alias task for some task.",
+  "repository": "tunnckoCore/base-task-alias",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard --verbose",
+    "pretest": "npm run lint",
+    "test": "nyc node test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "base-task": "^0.6.1",
+    "is-valid-app": "^0.2.0"
+  },
+  "devDependencies": {
+    "base": "^0.11.1",
+    "coveralls": "^2.11.12",
+    "mukla": "^0.4.1",
+    "nyc": "^8.1.0",
+    "pre-commit": "*",
+    "standard": "^8.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "alias",
+    "aliases",
+    "base",
+    "basejs",
+    "baseplugin",
+    "node",
+    "plugin",
+    "task",
+    "tasks"
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
+}
