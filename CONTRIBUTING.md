@@ -135,7 +135,7 @@ This document is adapted from a few Contributing Guides. It is more general and 
 ## License
 
 Released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).  
-Copyright © 2016, [Charlike Mike Reagent](https://twitter.com/jonschlinkert).
+Copyright © 2016, [Charlike Mike Reagent](http://www.tunnckocore.tk).
 
 [gfm]: https://help.github.com/articles/creating-and-highlighting-code-blocks/
 [avajs]: https://github.com/avajs/ava/blob/master/contributing.md
