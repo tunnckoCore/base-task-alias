@@ -75,6 +75,7 @@ module.exports = function baseTaskAlias (options) {
       arraify(aliases).forEach(function (alias) {
         app.task(alias, [name])
       })
+      return this
     })
   }
 }
