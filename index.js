@@ -71,9 +71,13 @@ module.exports = function baseTaskAlias (options) {
      * @api public
      */
 
-    app.define('taskAlias', function taskAlias (name, aliases) {
+    app.define('taskAlias', function taskAlias (name, opts, aliases) {
+      var isOk = Array.isArray(opts)
+      aliases = isOk ? opts : aliases
+      opts = !isOk && typeof opts === 'object' ? opts : {}
+
       arraify(aliases).forEach(function (alias) {
-        app.task(alias, [name])
+        app.task(alias, opts, [name])
       })
       return this
     })
