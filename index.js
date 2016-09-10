@@ -16,6 +16,28 @@ function arraify (val) {
   return val
 }
 
+/**
+ * > Adds `.taskAlias` method that accept
+ * `name` and `aliases`. It creates task using
+ * the `.task` method for each item in `aliases`
+ * array, which task will point to `name` task.
+ *
+ * **Example**
+ *
+ * ```js
+ * var tasks = require('base-task')
+ * var taskAlias = require('base-task-alias')
+ * var Base = require('base')
+ * var app = new Base()
+ *
+ * app.use(tasks()).use(taskAlias())
+ * ```
+ *
+ * @param  {Object} `options` object to merge with `app.options`
+ * @return {Function} plugin executed by `.use` method
+ * @api public
+ */
+
 module.exports = function baseTaskAlias (options) {
   return function plugin (app) {
     if (!isValid(app, 'base-task-alias')) return
@@ -24,11 +46,31 @@ module.exports = function baseTaskAlias (options) {
     app.use(require('base-task')())
 
     /**
-     * [taskAlias description]
-     * @param  {[type]} `name`
-     * @param  {[type]} `aliases`
-     * @return {[type]}
+     * > Creates task for each item in `aliases`
+     * pointing to `name` as dependency.
+     *
+     * **Example**
+     *
+     * ```js
+     * app.use(taskAlias())
+     *
+     * app.taskAlias('foo', ['bar', 'qux'])
+     * app.task('foo', function () {
+     *   console.log('task: foo')
+     * })
+     *
+     * app.build('foo') // => 'task: foo'
+     * app.build('bar') // => 'task: foo'
+     * app.build('qux') // => 'task: foo'
+     * ```
+     *
+     * @name   `.taskAlias`
+     * @param  {String} `name` task name to which each alias will point
+     * @param  {Array|String} `aliases` list of alias task names
+     * @return {Object} return `this` instance for chaining
+     * @api public
      */
+
     app.define('taskAlias', function taskAlias (name, aliases) {
       arraify(aliases).forEach(function (alias) {
         app.task(alias, [name])
