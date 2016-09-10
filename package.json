@@ -49,6 +49,17 @@
     "tasks": [
       "readme"
     ],
+    "related": {
+      "list": [
+        "base-plugins-enhanced",
+        "base",
+        "base-plugins",
+        "base-task",
+        "verb",
+        "verb-generate-readme",
+        "generate"
+      ]
+    },
     "lint": {
       "reflinks": true
     }
