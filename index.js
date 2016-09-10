@@ -8,6 +8,7 @@
 'use strict'
 
 var isValid = require('is-valid-app')
+var extend = require('extend-shallow')
 
 function arraify (val) {
   if (!val) return []
@@ -15,11 +16,19 @@ function arraify (val) {
   return val
 }
 
-module.exports = function baseTaskAlias () {
+module.exports = function baseTaskAlias (options) {
   return function plugin (app) {
     if (!isValid(app, 'base-task-alias')) return
 
+    app.options = extend({}, app.options, options)
     app.use(require('base-task')())
+
+    /**
+     * [taskAlias description]
+     * @param  {[type]} `name`
+     * @param  {[type]} `aliases`
+     * @return {[type]}
+     */
     app.define('taskAlias', function taskAlias (name, aliases) {
       arraify(aliases).forEach(function (alias) {
         app.task(alias, [name])
