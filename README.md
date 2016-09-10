@@ -16,6 +16,50 @@ npm i base-task-alias --save
 const baseTaskAlias = require('base-task-alias')
 ```
 
+### [baseTaskAlias](index.js#L41)
+> Adds `.taskAlias` method that accept `name` and `aliases`. It creates task using the `.task` method for each item in `aliases` array, which task will point to `name` task.
+
+**Params**
+
+* `options` **{Object}**: object to merge with `app.options`    
+* `returns` **{Function}**: plugin executed by `.use` method  
+
+**Example**
+
+```js
+var tasks = require('base-task')
+var taskAlias = require('base-task-alias')
+var Base = require('base')
+var app = new Base()
+
+app.use(tasks()).use(taskAlias())
+```
+
+### [`.taskAlias`](index.js#L75)
+> Creates task for each item in `aliases` pointing to `name` as dependency.
+
+**Params**
+
+* `name` **{String}**: task name to which each alias will point    
+* `opts` **{Object|Array}**: options passed to `.task` or array of `aliases`    
+* `aliases` **{Array|String}**: list of alias task names    
+* `returns` **{Object}**: return `this` instance for chaining  
+
+**Example**
+
+```js
+app.use(taskAlias())
+
+app.taskAlias('foo', ['bar', 'qux'])
+app.task('foo', function () {
+  console.log('task: foo')
+})
+
+app.build('foo') // => 'task: foo'
+app.build('bar') // => 'task: foo'
+app.build('qux') // => 'task: foo'
+```
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/base-task-alias/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.

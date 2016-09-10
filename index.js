@@ -66,6 +66,7 @@ module.exports = function baseTaskAlias (options) {
      *
      * @name   `.taskAlias`
      * @param  {String} `name` task name to which each alias will point
+     * @param  {Object|Array} `opts` options passed to `.task` or array of `aliases`
      * @param  {Array|String} `aliases` list of alias task names
      * @return {Object} return `this` instance for chaining
      * @api public
