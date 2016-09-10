@@ -35,7 +35,7 @@ var app = new Base()
 app.use(tasks()).use(taskAlias())
 ```
 
-### [`.taskAlias`](index.js#L75)
+### [.taskAlias](index.js#L75)
 > Creates task for each item in `aliases` pointing to `name` as dependency.
 
 **Params**
