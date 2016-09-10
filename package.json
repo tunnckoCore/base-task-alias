@@ -1,6 +1,6 @@
 {
   "name": "base-task-alias",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Plugin that adds `.taskAlias` method to your @node-base application. Creating alias task for some task.",
   "repository": "tunnckoCore/base-task-alias",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
