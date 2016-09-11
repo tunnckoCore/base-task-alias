@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/tunnckocore/base-task-alias/compare/v0.1.3...v0.1.4) (2016-09-11)
+
+
+### Bug Fixes
+
+* **index:** make it work as smart plugin ([daefabf](https://github.com/tunnckocore/base-task-alias/commit/daefabf))
+
+
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://github.com/tunnckocore/base-task-alias/compare/v0.1.2...v0.1.3) (2016-09-10)
 
