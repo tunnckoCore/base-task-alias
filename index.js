@@ -82,5 +82,7 @@ module.exports = function baseTaskAlias (options) {
       })
       return this
     })
+
+    return plugin
   }
 }
