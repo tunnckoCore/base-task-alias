@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/tunnckocore/base-task-alias/compare/v0.1.4...v0.1.5) (2016-09-12)
+
+* **chore:** update CONTRIBUTING guide ([a2e24d0](https://github.com/tunnckocore/base-task-alias/commit/a2e24d0))
+* **update:** npm scripts ([1403d25](https://github.com/tunnckocore/base-task-alias/commit/1403d25))
+* **package:** make package commitizen-friendly ([6034cb6](https://github.com/tunnckocore/base-task-alias/commit/6034cb6))
+
+
+
 <a name="0.1.4"></a>
 ## [0.1.4](https://github.com/tunnckocore/base-task-alias/compare/v0.1.3...v0.1.4) (2016-09-11)
 
