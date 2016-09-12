@@ -21,4 +21,4 @@ notifications:
     on_success: never
     on_failure: never
 
-after_success: npm run coverage
+after_success: npm run report-coverage
