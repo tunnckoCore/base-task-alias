@@ -10,9 +10,15 @@
   "scripts": {
     "lint": "standard --verbose",
     "pretest": "npm run lint",
-    "test": "nyc node test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "release": "standard-version"
+    "test": "npm run coverage",
+    "posttest": "npm run lint:coverage",
+    "coverage": "nyc node test.js",
+    "lint:coverage": "nyc check-coverage --lines 100",
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prerelease": "npm test",
+    "release": "standard-version --sign",
+    "commit": "git add --all",
+    "postcommit": "git-cz"
   },
   "dependencies": {
     "base-task": "^0.6.1",
