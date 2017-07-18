@@ -21,7 +21,7 @@
     "postcommit": "git-cz"
   },
   "dependencies": {
-    "base-task": "^0.7.0",
+    "base-task": "^1.0.0",
     "extend-shallow": "^2.0.1",
     "is-valid-app": "^0.3.0"
   },
